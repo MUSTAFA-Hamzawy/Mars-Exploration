@@ -1,0 +1,190 @@
+﻿  CancellationEvent.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+  EmergencyMission.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.cpp(117,19): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
+  EmergencyRover.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+  FormulationEvent.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PolarMission.h(17,14): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\FormulationEvent.cpp(58,22): warning C4305: '=': truncation from 'int' to 'char'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\FormulationEvent.cpp(58,18): warning C4309: '=': truncation of constant value
+  main.cpp
+  MarsStaion.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PolarMission.h(17,14): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(5,24): error C2011: 'EmergencyMission': 'class' type redefinition
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(5): message : see declaration of 'EmergencyMission'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MarsStaion.cpp(370,1): error C2027: use of undefined type 'EmergencyMission'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(5): message : see declaration of 'EmergencyMission'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MarsStaion.cpp(457,1): error C2027: use of undefined type 'EmergencyMission'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(5): message : see declaration of 'EmergencyMission'
+  Mission.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.cpp(50,13): warning C4305: 'return': truncation from 'int' to 'char'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.cpp(50,9): warning C4309: 'return': truncation of constant value
+  MountainousMission.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+  MountainousRover.cpp
+  PolarMission.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PolarMission.h(17,14): warning C4309: 'default argument': truncation of constant value
+  PolarRover.cpp
+  PromotionEvent.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(45,5): error C2027: use of undefined type 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.h(29): message : see declaration of 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(49,35): error C2079: 'temp' uses undefined class 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(52,28): error C2027: use of undefined type 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.h(29): message : see declaration of 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(54,21): error C2027: use of undefined type 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.h(29): message : see declaration of 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(70,20): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.h(29): message : see declaration of 'LinkedPriorityQueue<EmergencyMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.cpp(80,21): error C2027: use of undefined type 'LinkedQueue<MountainousMission>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PromotionEvent.h(29): message : see declaration of 'LinkedQueue<MountainousMission>'
+  Rover2.cpp
+  UI.cpp
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(49,16): error C2143: syntax error: missing ';' before '*'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(155): message : see reference to class template instantiation 'UI<T>' being compiled
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(49,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(49,1): error C2238: unexpected token(s) preceding ';'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(58,23): error C2065: 'EmergencyMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(58,3): error C2923: 'LinkedPriorityQueue': 'EmergencyMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(59,15): error C2065: 'PolarMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(59,3): error C2923: 'LinkedQueue': 'PolarMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(60,15): error C2065: 'MountainousMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(60,3): error C2923: 'LinkedQueue': 'MountainousMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(70,15): error C2065: 'EmergencyMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(70,3): error C2923: 'LinkedQueue': 'EmergencyMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(71,15): error C2065: 'PolarMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(71,3): error C2923: 'LinkedQueue': 'PolarMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(72,15): error C2065: 'MountainousMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(72,3): error C2923: 'LinkedQueue': 'MountainousMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(77,23): error C2065: 'EmergencyMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(77,3): error C2923: 'LinkedPriorityQueue': 'EmergencyMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(78,15): error C2065: 'PolarMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(78,3): error C2923: 'LinkedQueue': 'PolarMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(79,15): error C2065: 'MountainousMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(79,3): error C2923: 'LinkedQueue': 'MountainousMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(101,15): error C2065: 'EmergencyMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(101,3): error C2923: 'LinkedQueue': 'EmergencyMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(102,15): error C2065: 'PolarMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(102,3): error C2923: 'LinkedQueue': 'PolarMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(103,15): error C2065: 'MountainousMission': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(103,3): error C2923: 'LinkedQueue': 'MountainousMission' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(153,15): error C2065: 'PromotionEvent': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(153,3): error C2923: 'LinkedQueue': 'PromotionEvent' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\Mission.h(16,9): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\MountainousMission.h(19,20): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\PolarMission.h(17,14): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\EmergencyMission.h(17,18): warning C4309: 'default argument': truncation of constant value
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(15,20): error C2760: syntax error: unexpected token 'identifier', expected 'type specifier'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(65,6): error C3861: 'P_Event_arr': identifier not found
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(66,6): error C3861: 'P_Event_arr': identifier not found
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(67,6): error C3861: 'P_Event_arr': identifier not found
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(112,13): error C2116: 'UI<T>::output': function parameter lists do not match between declarations
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(56): message : see declaration of 'UI<T>::output'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(130,1): error C2447: '{': missing function header (old-style formal list?)
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(183,13): error C2116: 'UI<T>::Display_waitingOfCurrentDay': function parameter lists do not match between declarations
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(75): message : see declaration of 'UI<T>::Display_waitingOfCurrentDay'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(184,1): error C2447: '{': missing function header (old-style formal list?)
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(280,1): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(229,28): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(232,32): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(235,25): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(280,1): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(246,24): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(249,28): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(252,21): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(280,1): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(263,30): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(266,34): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(269,25): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(324,1): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(286,23): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(289,27): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(292,20): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(324,1): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(298,19): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(301,23): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(304,16): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(324,1): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(311,25): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(314,29): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(317,22): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(369,1): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(330,24): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(333,28): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(336,21): error C2027: use of undefined type 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(61): message : see declaration of 'LinkedPriorityQueue<EmergencyRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(369,1): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(342,20): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(345,24): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(348,17): error C2027: use of undefined type 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(62): message : see declaration of 'LinkedPriorityQueue<PolarRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(369,1): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(355,26): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(358,30): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(361,23): error C2027: use of undefined type 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(63): message : see declaration of 'LinkedPriorityQueue<MountainousRover>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(372,13): error C2116: 'UI<T>::Display_CompletedOfCurrentDay': function parameter lists do not match between declarations
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(99): message : see declaration of 'UI<T>::Display_CompletedOfCurrentDay'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(373,1): error C2447: '{': missing function header (old-style formal list?)
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(420,9): error C3861: 'P_Event_arr': identifier not found
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(658,119): error C2065: 'PromotionEvent': undeclared identifier
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(658,107): error C2923: 'LinkedQueue': 'PromotionEvent' is not a valid template type argument for parameter 'T'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(662,12): error C2027: use of undefined type 'LinkedQueue<FormulationEvent>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(151): message : see declaration of 'LinkedQueue<FormulationEvent>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(666,12): error C2027: use of undefined type 'LinkedQueue<CancellationEvent>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(152): message : see declaration of 'LinkedQueue<CancellationEvent>'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(670,12): error C2027: use of undefined type 'LinkedQueue'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.h(14): message : see declaration of 'LinkedQueue'
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\UI.cpp(670,20): error C3861: 'P_Event_arr': identifier not found
+  Generating Code...
+D:\Collage\Projects\Programming\Second Term\اخر حاجه\Mars-Exploration_Last_Version\Mars Exploration\FormulationEvent.cpp(196): warning C4715: 'FormulationEvent::Excute': not all control paths return a value
