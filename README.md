@@ -1,4 +1,6 @@
 <div id="top"></div>
+<h1 align="center">Mars Exploration</h1>
+
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -24,10 +26,10 @@ Using the programming skills and our knowledge of the different data structures,
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- Screenshots -->
-# Screenshots
+<!--# Screenshots
 <div id="Screenshots">
  </div>
- 
+ -->
  
 <!-- Contributors -->
 # Contributors
