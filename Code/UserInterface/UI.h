@@ -99,6 +99,18 @@ public:
     queue<Event*> fetch_events(){
         return events;
     }
+
+    int get_auto_promotion_limit(){
+        return input_info.auto_promotion_limit;
+    }
+
+    int get_num_of_events(){
+        return input_info.num_of_event;
+    }
+
+    int get_total_num_of_rovers(){
+        return input_info.num_of_mountainous_rovers + input_info.num_of_emergency_rovers + input_info.num_of_polar_rovers;
+    }
 };
 
 #endif //MARS_EXPLORATION_USERINTERFACE_H

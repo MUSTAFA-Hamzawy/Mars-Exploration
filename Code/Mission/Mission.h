@@ -17,6 +17,9 @@ private:
     int significance;
     int id;
 public:
+    Mission(){
+        waiting_days = execution_days = completion_day = 0;
+    }
 
     Mission(int id)
     {
@@ -42,7 +45,32 @@ public:
     int get_signficance(){
         return significance;
     }
-
+    int get_waiting_days(){
+        return waiting_days;
+    }
+    int get_completion_day(){
+        return completion_day;
+    }
+    int get_formulated_day(){
+        return formulation_day;
+    }
+    int get_execution_days(){
+        return execution_days;
+    }
+    void set_completed_day(int day){
+        completion_day = day;
+    }
+    void increment_waiting_days()
+    {
+        waiting_days++;
+    }
+    void increment_execution_days()
+    {
+        execution_days++;
+    }
+    bool is_finished(){
+        return mission_duration == execution_days;
+    }
     void set_info(int mission_id, int target_loc, int num_of_days_to_finish, int significance, int formulation_day)
     {
         this->id = mission_id;
