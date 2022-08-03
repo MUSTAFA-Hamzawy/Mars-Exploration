@@ -4,7 +4,9 @@
 
 #ifndef FILE_PROMOTIONEVENT_H
 #define FILE_PROMOTIONEVENT_H
-
+#include "../Mission/mixed_missions_struct.h"
+#include <iostream>
+#include "../Mission/Mission.h"
 #include <iostream>
 using namespace std;
 #include "Event.h"
@@ -15,14 +17,32 @@ public:
         this->mission_id = mission_id;
     }
 
-    void execute(){
+    void execute(mixed_missions_struct &waiting_missions){
 
-    }
+        // find the mission in the mountainous queue
+        queue<Mission>temp;
+        Mission target(-1);
+        while (! waiting_missions.mountainous_missions.empty()){
+            bool condition = waiting_missions.mountainous_missions.front().get_id() == mission_id;
+            if (condition){
+                target = waiting_missions.mountainous_missions.front();
+            }else{
+                temp.push(waiting_missions.mountainous_missions.front());
+            }
+            waiting_missions.mountainous_missions.pop();
+        }
+        waiting_missions.mountainous_missions = temp;
+        if (target.get_id() == -1)
+        {
+            cerr << "This mission is not in the waiting list\n";
+            return;
+        }
 
-    void print_info(){
-        cout << "event_day" << event_day << endl;
-        cout << "mission_id" << mission_id << endl;
-
+        // calc its priority
+        int priority = target.calc_prioriy();
+        // add it to the emergency queue
+        // TODO : priority queue needs to be implemented
+        waiting_missions.emergency_mission.push(target);
     }
 };
 

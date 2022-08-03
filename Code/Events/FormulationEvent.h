@@ -4,38 +4,34 @@
 #include "Event.h"
 #ifndef FILE_FORMULATIONEVENT_H
 #define FILE_FORMULATIONEVENT_H
-
+#include "../Mission/mixed_missions_struct.h"
 #include <iostream>
+#include "../Mission/Mission.h"
 using namespace std;
 class FormulationEvent : public Event{
 private:
+    Mission mission;
     char mission_type;
-    int target_location;
-    int num_of_days_to_finish;
-    int significance;
+
 public:
-    void execute(){
+    void execute(mixed_missions_struct waiting_missions){
+
+        if (mission_type == 'M')
+            waiting_missions.mountainous_missions.push(mission);
+        else if (mission_type = 'E')
+            waiting_missions.emergency_mission.push(mission);
+        else
+            waiting_missions.polar_missions.push(mission);
 
     }
 
     void set_data(int event_day, int mission_id, char mission_typ, int target_loc, int num_of_days_to_finish, int significance){
         this->event_day = event_day;
-        this->mission_id = mission_id;
         this->mission_type = mission_typ;
-        this->target_location = target_loc;
-        this->num_of_days_to_finish = num_of_days_to_finish;
-        this->significance = significance;
+
+        mission.set_info(mission_id, target_loc, num_of_days_to_finish, significance, event_day);
     }
 
-    void print_info(){
-        cout << "event_day" << event_day << endl;
-        cout << "mission_id" << mission_id << endl;
-        cout << "mission_type" << mission_type << endl;
-        cout << "target_location" << target_location << endl;
-        cout << "num_of_days_to_finish" << num_of_days_to_finish << endl;
-        cout << "significance" << significance << endl;
-
-    }
 };
 
 

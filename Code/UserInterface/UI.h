@@ -17,7 +17,7 @@ using namespace std;
 class UI{
     string fileSource;
     InputInfo input_info;
-    Event** events;
+    queue<Event*> events;
     int output_mode;
 public:
     /**
@@ -67,8 +67,6 @@ public:
 
         input >> input_info.num_of_event;
 
-        this->events = new Event*[input_info.num_of_event];
-
         char charIn;
         int event_day, id, target_location, num_days_to_finish, significance;
         for (int i = 0; i < input_info.num_of_event; ++i) {
@@ -79,23 +77,27 @@ public:
                 input >> charIn;        //  mission type
                 input >> event_day >> id >> target_location >> num_days_to_finish >> significance;
                 ev->set_data(event_day, id, charIn, target_location, num_days_to_finish, significance);
-                events[i] = ev;
+                events.push(ev);
                 ev = nullptr;
             }else if (charIn == 'X'){
                 CancellationEvent *ev = new CancellationEvent();
                 input >> event_day >> id;
                 ev->set_data(event_day, id);
-                events[i] = ev;
+                events.push(ev);
                 ev = nullptr;
             }else if (charIn == 'P'){
                 PromotionEvent *ev = new PromotionEvent();
                 input >> event_day >> id;
                 ev->set_data(event_day, id);
-                events[i] = ev;
+                events.push(ev);
                 ev = nullptr;
             }
         }
         cout << "OK, I got the input.";
+    }
+
+    queue<Event*> fetch_events(){
+        return events;
     }
 };
 

@@ -4,7 +4,7 @@
 
 #ifndef MARS_EXPLORATION_EVENT_H
 #define MARS_EXPLORATION_EVENT_H
-
+#include "../Mission/mixed_missions_struct.h"
 class Event{
 protected:
     int event_day;
@@ -12,6 +12,9 @@ protected:
 public:
     virtual void execute() = 0;
     virtual void print_info() = 0;
+    int get_event_day(mixed_missions_struct waiting_missions){
+        return event_day;
+    }
 };
 
 #endif //MARS_EXPLORATION_EVENT_H
