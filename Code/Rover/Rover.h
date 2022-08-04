@@ -15,7 +15,7 @@ private:
     Mission mission;
 public:
 
-    Rover{
+    Rover() {
     num_of_finished_missions = 0;
     days_count_in_checkup_station = 0;
     }

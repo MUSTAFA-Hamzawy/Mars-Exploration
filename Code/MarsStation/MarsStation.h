@@ -19,7 +19,7 @@ private:
     queue<Rover> executing_rovers[3];                     // index 0 for emergency, index 1 for polar, index 2 for mountainous
     queue<Event*> events;
     mixed_missions waiting_missions;
-    priority_queue<Mission>executing_missions;
+    PriorityQueue executing_missions;
     queue<Mission>completed_missions;
     UI user_interface;
     int current_day;
@@ -36,8 +36,24 @@ public:
     void read_input(){
         user_interface.readInputFile();
 
-        // TODO : create rovers
+        //  create rovers
+        for (int j = 0; j < user_interface.get_num_emergency_rovers(); ++j) {
+            available_rovers[0].push(new Rover()->set_data(user_interface.get_checkup_duration(),
+                                                           user_interface.get_speed_of_emergency_rover(),
+                                                           user_interface.get_num_of_missions_before_emergency_checkup()));
+        }
+        for (int j = 0; j < user_interface.get_num_polar_rovers(); ++j) {
+            available_rovers[1].push(new Rover()->set_data(user_interface.get_checkup_duration(),
+                                                           user_interface.get_speed_of_polar_rover(),
+                                                           user_interface.get_num_of_missions_before_polar_checkup()));
+        }
+        for (int j = 0; j < user_interface.get_num_mountainous_rovers(); ++j) {
+            available_rovers[2].push(new Rover()->set_data(user_interface.get_checkup_duration(),
+                                                           user_interface.get_speed_of_mountainous_rover(),
+                                                           user_interface.get_num_of_missions_before_mountainous_checkup()));
+        }
 
+        // assign the events from the input file
         events = user_interface.fetch_events();
     }
 
@@ -68,7 +84,7 @@ public:
 
             // assign the mission to it
             rover_1.assign_mission(waiting_missions.emergency_mission.front());
-            executing_missions.push(waiting_missions.emergency_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.emergency_mission.front(), waiting_missions.emergency_mission.front().get_duration());
             waiting_missions.emergency_mission.pop();
             return true;
 
@@ -80,7 +96,7 @@ public:
 
             // assign the mission to it
             rover_2.assign_mission(waiting_missions.emergency_mission.front());
-            executing_missions.push(waiting_missions.emergency_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.emergency_mission.front(), waiting_missions.emergency_mission.front().get_duration());
             waiting_missions.emergency_mission.pop();
             return true;
         }else if(! available_rovers[1].empty())// check for available polar rover
@@ -91,7 +107,7 @@ public:
 
             // assign the mission to it
             rover_3.assign_mission(waiting_missions.emergency_mission.front());
-            executing_missions.push(waiting_missions.emergency_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.emergency_mission.front(), waiting_missions.emergency_mission.front().get_duration());
             waiting_missions.emergency_mission.pop();
             return true;
         }
@@ -107,7 +123,7 @@ public:
 
             // assign the mission to it
             rover_1.assign_mission(waiting_missions.mountainous_mission.front());
-            executing_missions.push(waiting_missions.mountainous_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.mountainous_mission.front(), waiting_missions.mountainous_mission.front().get_duration());
             waiting_missions.mountainous_mission.pop();
 
         }else if(! available_rovers[0].empty())// check for available mountainous rover
@@ -118,7 +134,7 @@ public:
 
             // assign the mission to it
             rover_2.assign_mission(waiting_missions.mountainous_mission.front());
-            executing_missions.push(waiting_missions.mountainous_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.mountainous_mission.front(), waiting_missions.mountainous_mission.front().get_duration());
             waiting_missions.mountainous_mission.pop();
         }
     }
@@ -132,7 +148,7 @@ public:
 
             // assign the mission to it
             rover_1.assign_mission(waiting_missions.polar_mission.front());
-            executing_missions.push(waiting_missions.polar_mission.front()); // TODO : set the priority here be the mission_duration
+            executing_missions.push(waiting_missions.polar_mission.front(), waiting_missions.polar_mission.front().get_duration());
             waiting_missions.polar_mission.pop();
 
         }
@@ -167,6 +183,7 @@ public:
         }
 
         waiting_missions.polar_missions = temp;
+
         // mountainous missions
         queue<Mission> temp_2;
         while (! waiting_missions.mountainous_missions.empty())
@@ -179,11 +196,29 @@ public:
 
         waiting_missions.mountainous_missions = temp_2;
         // emergency missions
-        // TODO : same steps but for priority queue
+        PriorityQueue temp_3;
+        while(! waiting_missions.emergency_missions.empty())
+        {
+            temp_mission = waiting_missions.emergency_missions.front();
+            temp_mission.increment_waiting_days();
+            temp_3.push(temp_mission);
+            waiting_missions.emergency_missions.pop();
+        }
+        waiting_missions.emergency_missions = temp_3;
     }
 
     void increment_execution_days(){
-        // TODO : same steps for priority queue
+        // emergency missions
+        PriorityQueue temp;
+        Mission temp_mission;
+        while(! executing_missions.empty())
+        {
+            temp_mission = executing_missions.front();
+            temp_mission.increment_waiting_days();
+            temp.push(temp_mission);
+            executing_missions.pop();
+        }
+        executing_missions = temp;
     }
 
     void check_finished_rovers(){
@@ -253,7 +288,7 @@ public:
             {
                 num_of_auto_promoted++;
                 // promote this mission to be an emergency one
-                // TODO : push temp_mission in the priority queue here
+                waiting_missions.emergency_missions.push(temp_mission, temp_mission.calc_prioriy());
             }else
                 temp.push(temp_mission);
         }

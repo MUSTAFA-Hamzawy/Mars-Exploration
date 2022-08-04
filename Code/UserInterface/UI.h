@@ -18,15 +18,8 @@ class UI{
     string fileSource;
     InputInfo input_info;
     queue<Event*> events;
-    int output_mode;
 public:
-    /**
-     * The constructor
-     * @param out_mode : to select the output mode because the program supports 3 modes of output.
-     */
-    UI(int out_mode){
-        this->output_mode = out_mode;
-    }
+
     /**
      * To set the source of the input file
      * @param src
@@ -110,6 +103,39 @@ public:
 
     int get_total_num_of_rovers(){
         return input_info.num_of_mountainous_rovers + input_info.num_of_emergency_rovers + input_info.num_of_polar_rovers;
+    }
+
+    int get_num_emergency_rovers(){
+        return input_info.num_of_emergency_rovers;
+    }
+    int get_num_polar_rovers(){
+        return input_info.num_of_polar_rovers;
+    }
+    int get_num_mountainous_rovers(){
+        return input_info.num_of_mountainous_rovers;
+    }
+    int get_speed_of_emergency_rover(){
+        return input_info.speed_of_emergency_rovers;
+    }
+    int get_speed_of_polar_rover(){
+        return input_info.speed_of_polar_rovers;
+    }
+    int get_speed_of_mountainous_rover(){
+        return input_info.speed_of_mountainous_rovers;
+    }
+
+    int get_num_of_missions_before_mountainous_checkup(){
+        return input_info.num_of_mountainous_missions_before_checkup;
+    }
+    int get_num_of_missions_before_polar_checkup(){
+        return input_info.num_of_polar_missions_before_checkup;
+    }
+    int get_num_of_missions_before_emergency_checkup(){
+        return input_info.num_of_emergency_missions_before_checkup;
+    }
+    int get_checkup_duration()
+    {
+        return input_info.checkup_duration;
     }
 };
 
