@@ -16,7 +16,7 @@ public:
         this->mission_id = mission_id;
     }
 
-    void execute(mixed_missions_struct waiting_missions){
+    void execute(mixed_missions_struct &waiting_missions){
         // find the mission in the mountainous queue
         queue<Mission>temp;
         Mission target(-1);

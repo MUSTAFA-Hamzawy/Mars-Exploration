@@ -38,11 +38,8 @@ public:
             return;
         }
 
-        // calc its priority
-        int priority = target.calc_prioriy();
         // add it to the emergency queue
-        // TODO : priority queue needs to be implemented
-        waiting_missions.emergency_mission.push(target);
+        waiting_missions.emergency_mission.push(target, target.calc_prioriy());
     }
 };
 

@@ -14,12 +14,12 @@ private:
     char mission_type;
 
 public:
-    void execute(mixed_missions_struct waiting_missions){
+    void execute(mixed_missions_struct &waiting_missions){
 
         if (mission_type == 'M')
             waiting_missions.mountainous_missions.push(mission);
         else if (mission_type = 'E')
-            waiting_missions.emergency_mission.push(mission);
+            waiting_missions.emergency_mission.push(mission, mission.calc_prioriy());
         else
             waiting_missions.polar_missions.push(mission);
 

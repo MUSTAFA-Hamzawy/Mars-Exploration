@@ -10,9 +10,8 @@ protected:
     int event_day;
     int mission_id;
 public:
-    virtual void execute(mixed_missions_struct waiting_missions) = 0;
-    virtual void print_info() = 0;
-    int get_event_day(mixed_missions_struct waiting_missions){
+    virtual void execute(mixed_missions_struct &waiting_missions) = 0;
+    int get_event_day(){
         return event_day;
     }
 };

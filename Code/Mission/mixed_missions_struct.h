@@ -10,6 +10,6 @@
 struct mixed_missions_struct{
     std::queue<Mission> polar_missions;
     std::queue<Mission> mountainous_missions;
-    PriorityQueue emergency_mission;
+    PriorityQueue emergency_missions;
 };
 #endif //FILE_MIXED_MISSIONS_STRUCT_H
