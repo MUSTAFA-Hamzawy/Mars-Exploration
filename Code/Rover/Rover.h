@@ -12,7 +12,7 @@ private:
     int speed;
     int num_of_missions_before_checkup;
     int num_of_finished_missions;
-    Mission mission;
+    Mission* mission;
 public:
 
     Rover() {
@@ -20,7 +20,7 @@ public:
     days_count_in_checkup_station = 0;
     }
     void assign_mission(Mission m){
-        this->mission = m;
+        this->mission = &m;
     }
     void set_data(int checkup_duration, int speed, int num_of_missions_before_checkup){
         this->checkup_duration = checkup_duration;
@@ -48,7 +48,28 @@ public:
 
     }
     Mission get_mission(){
-        return mission;
+        return *mission;
+    }
+
+    void operator = (const Rover& copy)
+    {
+        this->checkup_duration = copy.checkup_duration;
+        this->days_count_in_checkup_station = copy.days_count_in_checkup_station;
+        this->speed = copy.speed;
+        this->num_of_missions_before_checkup = copy.num_of_missions_before_checkup;
+        this->num_of_finished_missions = copy.num_of_finished_missions;
+        this->mission = copy.mission;
+    }
+
+    // Copy constructor
+    Rover(const Rover& copy)
+    {
+        this->checkup_duration = copy.checkup_duration;
+        this->days_count_in_checkup_station = copy.days_count_in_checkup_station;
+        this->speed = copy.speed;
+        this->num_of_missions_before_checkup = copy.num_of_missions_before_checkup;
+        this->num_of_finished_missions = copy.num_of_finished_missions;
+        this->mission = copy.mission;
     }
 
 

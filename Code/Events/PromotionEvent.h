@@ -39,7 +39,7 @@ public:
         }
 
         // add it to the emergency queue
-        waiting_missions.emergency_mission.push(target, target.calc_prioriy());
+        waiting_missions.emergency_missions.push(target, target.calc_prioriy());
     }
 };
 

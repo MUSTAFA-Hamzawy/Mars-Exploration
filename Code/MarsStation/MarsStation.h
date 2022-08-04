@@ -11,6 +11,7 @@
 #include "../UserInterface/UI.h"
 #include "../Mission/mixed_missions_struct.h"
 #include "../PriorityQueue.h"
+#include <unistd.h>
 
 class MarsStation {
 private:
@@ -31,6 +32,11 @@ public:
         current_day = 1;
         num_of_executed_events = 0;
         num_of_auto_promoted= 0 ;
+    }
+
+    void set_UI(UI user_interface)
+    {
+        this->user_interface = user_interface;
     }
 
     void read_input(){
@@ -91,6 +97,7 @@ public:
             // assign the mission to it
             rover_1.assign_mission(waiting_missions.emergency_missions.front());
             executing_missions.push(waiting_missions.emergency_missions.front(), waiting_missions.emergency_missions.front().get_duration());
+            executing_rovers[0].push(* new Rover(rover_1));
             waiting_missions.emergency_missions.pop();
             return true;
 
@@ -103,6 +110,7 @@ public:
             // assign the mission to it
             rover_2.assign_mission(waiting_missions.emergency_missions.front());
             executing_missions.push(waiting_missions.emergency_missions.front(), waiting_missions.emergency_missions.front().get_duration());
+            executing_rovers[0].push(* new Rover(rover_2));
             waiting_missions.emergency_missions.pop();
             return true;
         }else if(! available_rovers[1].empty())// check for available polar rover
@@ -114,6 +122,7 @@ public:
             // assign the mission to it
             rover_3.assign_mission(waiting_missions.emergency_missions.front());
             executing_missions.push(waiting_missions.emergency_missions.front(), waiting_missions.emergency_missions.front().get_duration());
+            executing_rovers[0].push(* new Rover(rover_3));
             waiting_missions.emergency_missions.pop();
             return true;
         }
@@ -121,32 +130,36 @@ public:
     }
 
     void check_and_assign_mountainous_missions(){
+
+        if (waiting_missions.mountainous_missions.empty())
+            return;
+
+        Rover temp;
         if (! available_rovers[2].empty())      // check for available mountainous rover
         {
             // pop the rover from the available list
-            Rover rover_1 = available_rovers[2].front();
+            temp = available_rovers[2].front();
             available_rovers[2].pop();
-
-            // assign the mission to it
-            rover_1.assign_mission(waiting_missions.mountainous_missions.front());
-            executing_missions.push(waiting_missions.mountainous_missions.front(), waiting_missions.mountainous_missions.front().get_duration());
-            waiting_missions.mountainous_missions.pop();
-
-        }else if(! available_rovers[0].empty())// check for available mountainous rover
+        }else if(! available_rovers[0].empty())// check for available emergency rover
         {
             // pop the rover from the available list
-            Rover rover_2 = available_rovers[0].front();
+            temp = available_rovers[0].front();
             available_rovers[0].pop();
-
-            // assign the mission to it
-            rover_2.assign_mission(waiting_missions.mountainous_missions.front());
-            executing_missions.push(waiting_missions.mountainous_missions.front(), waiting_missions.mountainous_missions.front().get_duration());
-            waiting_missions.mountainous_missions.pop();
         }
+        // assign the mission to it
+        temp.assign_mission(waiting_missions.mountainous_missions.front());
+        executing_missions.push(waiting_missions.mountainous_missions.front(), waiting_missions.mountainous_missions.front().get_duration());
+        executing_rovers[2].push(* new Rover(temp));
+        waiting_missions.mountainous_missions.pop();
+
     }
 
     void check_and_assign_polar_missions(){
-        if (! available_rovers[1].empty())      // check for available mountainous rover
+
+        if (waiting_missions.polar_missions.empty())
+            return;
+
+        if (! available_rovers[1].empty())      // check for available polar rover
         {
             // pop the rover from the available list
             Rover rover_1 = available_rovers[1].front();
@@ -155,6 +168,7 @@ public:
             // assign the mission to it
             rover_1.assign_mission(waiting_missions.polar_missions.front());
             executing_missions.push(waiting_missions.polar_missions.front(), waiting_missions.polar_missions.front().get_duration());
+            executing_rovers[1].push(* new Rover(rover_1));
             waiting_missions.polar_missions.pop();
 
         }
@@ -188,7 +202,8 @@ public:
             waiting_missions.polar_missions.pop();
         }
 
-        waiting_missions.polar_missions = temp;
+        if (!temp.empty())
+            waiting_missions.polar_missions = temp;
 
         // mountainous missions
         queue<Mission> temp_2;
@@ -200,7 +215,9 @@ public:
             waiting_missions.mountainous_missions.pop();
         }
 
-        waiting_missions.mountainous_missions = temp_2;
+        if (!temp.empty())
+            waiting_missions.mountainous_missions = temp_2;
+
         // emergency missions
         PriorityQueue temp_3;
         while(! waiting_missions.emergency_missions.empty())
@@ -210,21 +227,45 @@ public:
             temp_3.push(temp_mission, temp_mission.calc_prioriy());
             waiting_missions.emergency_missions.pop();
         }
-        waiting_missions.emergency_missions = temp_3;
+        if (!temp.empty())
+            waiting_missions.emergency_missions = temp_3;
     }
 
     void increment_execution_days(){
-        // emergency missions
+        // update the execution days of the missions
         PriorityQueue temp;
         Mission temp_mission;
         while(! executing_missions.empty())
         {
             temp_mission = executing_missions.front();
-            temp_mission.increment_waiting_days();
-            temp.push(temp_mission, temp_mission.calc_prioriy());
+            temp_mission.increment_execution_days();
+            temp.push(temp_mission, temp_mission.get_duration() - temp_mission.get_execution_days());
             executing_missions.pop();
         }
-        executing_missions = temp;
+        if (!temp.empty())
+            executing_missions = temp;
+
+        // update the execution days of the missions stored in rovers
+//        queue<Rover> temp_2;
+//        Rover temp_rover;
+//        for (int i = 0; i < 3; ++i) {
+//            while(! executing_rovers[i].empty())
+//            {
+//                temp_rover = executing_rovers[i].front();
+//                temp_rover.get_mission().increment_execution_days();
+//                temp_2.push(temp_rover);
+//                executing_rovers[i].pop();
+//            }
+//            if (!temp_2.empty())
+//                executing_missions = temp;
+//
+//            // empty the temp queue
+//            while(!temp_2.empty())
+//                temp_2.pop();
+//        }
+
+
+
     }
 
     void check_finished_rovers(){
@@ -241,16 +282,17 @@ public:
                     completed_missions.push(temp_rover.get_mission());
                     if (temp_rover.need_checkup())
                     {
-                        checkup_rovers[i].push(temp_rover);
+                        checkup_rovers[i].push(* new Rover(temp_rover));
                     }else{
-                        available_rovers[i].push(temp_rover);
+                        available_rovers[i].push(* new Rover(temp_rover));
                     }
                 }
                 else{
                     temp.push(temp_rover);
                 }
             }
-            executing_rovers[i] = temp;
+            if (!temp.empty())
+                executing_rovers[i] = temp;
 
             // clear the queue
             while(! temp.empty())
@@ -269,13 +311,14 @@ public:
                 temp_rover.increment_checkup_days();
                 if (temp_rover.finished_checkup_duration())
                 {
-                    available_rovers[i].push(temp_rover);
+                    available_rovers[i].push(* new Rover(temp_rover));
                 }
                 else{
                     temp.push(temp_rover);
                 }
             }
-            checkup_rovers[i] = temp;
+            if (!temp.empty())
+                checkup_rovers[i] = temp;
 
             // clear the queue
             while(! temp.empty())
@@ -294,11 +337,12 @@ public:
             {
                 num_of_auto_promoted++;
                 // promote this mission to be an emergency one
-                waiting_missions.emergency_missions.push(temp_mission, temp_mission.calc_prioriy());
+                waiting_missions.emergency_missions.push(* new Mission(temp_mission), temp_mission.calc_prioriy());
             }else
                 temp.push(temp_mission);
         }
-        waiting_missions.mountainous_missions = temp;
+        if (!temp.empty())
+            waiting_missions.mountainous_missions = temp;
 
     }
     bool is_everything_done(){
@@ -367,7 +411,6 @@ public:
     }
 
     void daily_output(){
-
         cout << "Current Day : " << current_day << endl;
         cout << "Waiting Missions : " << waiting_missions.polar_missions.size() + waiting_missions.mountainous_missions.size() + waiting_missions.emergency_missions.get_size() << "\n\n";
         cout << "In-Execution Missions / Rovers : " << executing_missions.get_size() << " / " <<
@@ -375,7 +418,7 @@ public:
         cout << "Available rovers : " << available_rovers[0].size()+available_rovers[1].size()+available_rovers[2].size() << "\n\n";
         cout << "In-Checkup Rovers : " << checkup_rovers[0].size()+checkup_rovers[1].size()+checkup_rovers[2].size() << "\n\n";
         cout << "Completed Missions : " << completed_missions.size() << "\n\n";
-        cout << "======================================================================================================================";
+        cout << "======================================================================================================================\n";
     }
 
     void simulate(){
@@ -387,6 +430,7 @@ public:
 
         while (! finished)
         {
+
             // 1- check events and execute them
             check_events();
 
@@ -394,7 +438,7 @@ public:
             check_waiting_missions();
 
             // 3- print the daily info
-            daily_output();
+           // daily_output();
 
             // 4- collect statistics that needed to create the output file
             finished = next_day();

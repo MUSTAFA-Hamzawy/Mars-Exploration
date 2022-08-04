@@ -19,7 +19,7 @@ public:
         if (mission_type == 'M')
             waiting_missions.mountainous_missions.push(mission);
         else if (mission_type = 'E')
-            waiting_missions.emergency_mission.push(mission, mission.calc_prioriy());
+            waiting_missions.emergency_missions.push(mission, mission.calc_prioriy());
         else
             waiting_missions.polar_missions.push(mission);
 

@@ -36,18 +36,19 @@ public:
         inserted->mission = data;
         inserted->pri = priority;
 
-        if (head == nullptr || priority > head->pri)
+        if (head == nullptr || priority < head->pri)
         {
             inserted->next = head;
             head = inserted;
-        }else{
+        }
+        else{
             Node* temp = head;
-            while (temp->next != nullptr && temp->next->pri <= priority)
+            while (temp->next != nullptr && temp->next->pri >= priority)
             {
                 temp = temp->next;
-                inserted->next = temp->next;
-                temp->next = inserted;
             }
+            inserted->next = temp->next;
+            temp->next = inserted;
         }
         size++;
     }
@@ -69,11 +70,7 @@ public:
     }
 
     Mission front(){
-
-        if (head)
-        {
             return head->mission;
-        }
     }
 
     bool empty(){
